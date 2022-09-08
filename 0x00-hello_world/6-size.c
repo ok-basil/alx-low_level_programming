@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-//This one goes out to all the sizes out there
+/**
+ * main - program execution starts here
+ * Description: this is the main function
+ * Return: an integer to signify success or fail
+ */
 int main(void)
 {
 	int int_type;
