@@ -6,7 +6,7 @@
  * Return: an integer to signify success or fail
  */
 int main(void)
-
+{
 	int alphabet = 'z';
 
 	while (alphabet >= 'a')
