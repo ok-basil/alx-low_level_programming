@@ -11,7 +11,7 @@ int main(void)
 
 	for (number = '0'; number <= '9'; number++)
 	{
-		purchar(number);
+		putchar(number);
 		if (number != '9')
 		{
 		putchar(',');
@@ -19,7 +19,7 @@ int main(void)
 		}
 	}
 	
-	purchar('\n');
+	putchar('\n');
 
 	return (0);
 }
