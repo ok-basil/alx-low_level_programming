@@ -3,7 +3,7 @@
 /**
  * main - program execution starts here
  * Description: this is the main function
- * ReturnL an integer to signify success or failure
+ * Return: an integer to signify success or failure
  */
 int main(void)
 {
