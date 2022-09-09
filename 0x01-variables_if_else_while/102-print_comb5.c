@@ -12,8 +12,8 @@ int main(void)
 
 	for (i = 0; i < 100; i++)
 	{
-		c = i / 10;
-		d = i % 10;
+		a = i / 10;
+		b = i % 10;
 
 		for (j = 0; j < 100; j++)
 		{
