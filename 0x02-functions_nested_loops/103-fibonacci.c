@@ -25,4 +25,4 @@ int main(void)
 	}
 	printf("%lu\n", sumofeven);
 	return (0);
-	
+}
