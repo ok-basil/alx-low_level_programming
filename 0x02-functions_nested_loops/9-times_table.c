@@ -15,7 +15,7 @@ void times_table(void)
 		{
 			product = i * j;
 			product_y = product % 10;
-			prodcut_x = product / 10;
+			product_x = product / 10;
 
 			if (product_x == 0)
 			{
