@@ -25,6 +25,6 @@ int main(void)
 		prevfibonacci = swap;
 		counter++;
 	}
-	purchar('\n');
+	putchar('\n');
 	return (0);
 }
