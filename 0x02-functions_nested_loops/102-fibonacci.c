@@ -20,7 +20,7 @@ int main(void)
 		if (counter != 50)
 			printf("%lu, ", fibonacci);
 		else
-			printf("%luL, ", fibonacci);
+			printf("%lu", fibonacci);
 		prevfibonacci = swap;
 		counter++;
 	}
