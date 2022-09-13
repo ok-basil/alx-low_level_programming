@@ -13,7 +13,7 @@ int main(void)
 	unsigned long int swap;
 
 	printf("%lu, %lu, ", prevfibonacci, fibonacci);
-	while (counter <=50)
+	while (counter <= 50)
 	{
 		swap = fibonacci;
 		fibonacci = fibonacci + prevfibonacci;
@@ -25,6 +25,6 @@ int main(void)
 		counter++;
 	}
 	putchar('\n');
-	
+
 	return (0);
 }
