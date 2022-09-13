@@ -13,7 +13,7 @@ void jack_bauer(void)
 	int hours_y;
 	int minutes_x;
 	int minutes_y;
-	
+
 	for (hours = 0; hours <= 23; hours++)
 	{
 		hours_y = hours % 10;
