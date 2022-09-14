@@ -1,43 +1,40 @@
-#include "main.h"
+/*
+ * File: 9-times_table.c
+ * Auth: Basil Okache
+ */
 
+#include "main.h"
 /**
- * times_tables - print the multiplication table
- *Description: prints the 9 times table, starting with 0
+ * times_table - prints the times table from 0-9.
+ * Return: Nothing.
  */
 void times_table(void)
 {
-	int i, j;
-	int product, product_x, product_y;
+	int i, j, res;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i <= 9; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 0; j <= 9; j++)
 		{
-			product = i * j;
-			product_y = product % 10;
-			product_x = product / 10;
-
-			if (product_x == 0)
-			{
-				if (j != 0)
-				{
-					_putchar(' ');
-					_putchar(' ');
-				}
-				_putchar(product_y + '0');
-			}
-			else
-			{
-				_putchar(' ');
-				_putchar(product_x + '0');
-				_putchar(product_y + '0');
-			}
-			if (j != 9)
+			res = (i * j);
+			if (j != 0)
 			{
 				_putchar(',');
+				_putchar(' ');
 			}
+			if (res >= 10)
+			{
+				_putchar((res / 10) + '0');
+				_putchar((res % 10) + '0');
+			}
+			else if (res < 10 && j != 0)
+			{
+				_putchar(' ');
+				_putchar((res % 10) + '0');
+			}
+			else
+				_putchar((res % 10) + '0');
 		}
-		_putchar('\n');
+		_puthar('\n');
 	}
-
 }
