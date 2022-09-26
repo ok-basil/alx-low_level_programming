@@ -1,30 +1,32 @@
-/**
- * cap_string - multiplies two digits
- * @str: 1st digit in the multiplication
- * Description: multiplies two digits
- * Return: the result of the multiplication
- */
-char *cap_string(char *str)
-{
-	int i, ch, prev_space = 0;
+#include "main.h"
 
-	i = 0;
-	while (str[i] != '\0')
+/**
+ * cap_string - take strings and capitalize words
+ * @a: string to capitalize
+ * Return: capitalized words
+ */
+
+char *cap_string(char *a)
+{
+	int i, x;
+	char *seperators = ",;.!?\"(){} \n\t";
+
+	for (i = 0; *(a + i) != '\0'; i++)
 	{
-		ch = str[i];
-		if (ch == '\n' || ch == ' ' || ch == '\t' || ch == '.')
-			prev_space = 1;
-		if (ch >= 'a' && ch <= 'z' && prev_space)
-		{
-			str[i] = ch - 32;
-			prev_space = 0;
-		}
-		else if (ch != '\n' && ch != ' ' && ch != '\t' &&
-				ch != '.' && prev_space)
-		{
-			prev_space = 0;
-		}
-		i++;
+		if (*(a + i) >= 'a' && *(a + i) <= 'z')
+			for (x = 0; *(seperators + x) != '\0'; x++)
+			{
+				if (*(a + i - 1) == *(seperators + x))
+				{
+					*(a + i) -= 32;
+					break;
+				}
+				else if (i == 0)
+				{
+					*(a + i) -= 32;
+					break;
+				}
+			}
 	}
-	return (str);
+	return (a);
 }

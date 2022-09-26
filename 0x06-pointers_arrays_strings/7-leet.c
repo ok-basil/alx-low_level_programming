@@ -1,31 +1,25 @@
+#include "main.h"
+
 /**
- * leet - multiplies two digits
- * @str: 1st digit in the multiplication
- * Description: multiplies two digits
- * Return: the result of the multiplication
+ * leet - take strings and capitalize words
+ * @a: string to capitalize
+ * Return: capitalized words
  */
-char *leet(char *str)
+
+char *leet(char *a)
 {
-	int letter, i = 0;
+	int i, x;
+	char check[] = "aAeEoOtTlL";
+	char change[] = "4433007711";
 
-	while (str[i] != '\0')
+	for (i = 0; *(a + i) != '\0'; i++)
 	{
-		letter = str[i];
-		if (letter == 'A' || letter == 'a')
-			str[i] = '4';
-
-		if (letter == 'e' || letter == 'E')
-			str[i] = '3';
-
-		if (letter == 'o' || letter == 'O')
-			str[i] = '0';
-
-		if (letter == 't' || letter == 'T')
-			str[i] = '7';
-
-		if (letter == 'l' || letter == 'L')
-			str[i] = '1';
-		i++;
+		for (x = 0; check[x]; x++)
+			if (check[x] == *(a + i))
+			{
+				*(a + i) = change[x];
+				break;
+			}
 	}
-	return (str)
+	return (a);
 }

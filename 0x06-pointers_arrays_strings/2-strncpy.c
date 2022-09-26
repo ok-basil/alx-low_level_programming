@@ -1,23 +1,23 @@
+#include "main.h"
+
 /**
- * _strncpy - multiplies two digits
- * @dest: 1st digit in the multiplication
- * @src: 1st digit in the multiplication
- * @n: 2nd digit to be multiplied
- * Description: multiplies two digits
- * Return: the result of the multiplication
+ * _strncpy - copy two strings only taking n bytes from src
+ * @dest: first string to be added to
+ * @src: second string to be added
+ * @n: number of bites to use from src
+ * Return: concatenated string
  */
+
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i, j;
+	char *temp = dest;
 
-	i = j = 0;
-	while (1)
+	for (; n != 0 && *src != '\0'; n--, src++)
 	{
-		while ((dest[i++] = src[j++]) != '\0' && i !=  n) /* copy src */
-			;
-		if (i == n)
-			break;
-		j = 0;
+		*temp = *src;
+		temp++;
 	}
+	for (; n != 0 && *temp != '\0'; n--, temp++)
+		*temp = '\0';
 	return (dest);
 }
